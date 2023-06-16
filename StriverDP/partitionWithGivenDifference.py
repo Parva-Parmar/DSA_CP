@@ -1,7 +1,6 @@
 '''
 https://www.codingninjas.com/codestudio/problems/partitions-with-given-difference_3751628?source=youtube&campaign=striver_dp_videos&leftPanelTab=0
 '''
-
 from os import *
 from sys import *
 from collections import *
