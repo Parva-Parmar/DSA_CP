@@ -1,32 +1,32 @@
 #!/usr/bin/env python
+
+'''
+https://codeforces.com/problemset/problem/1914/C
+'''
+
 import os
 import sys
 from io import BytesIO, IOBase
-from math import ceil, floor, sqrt
-from itertools import permutations
+from math import ceil
 
 t = 0
 def main() -> None:
-    
-    n = int(input())
-    s = input()
-
-    l = set()
-
+    n,k = map(int,input().split())
+    a = list(map(int,input().split()))
+    b = list(map(int,input().split()))
+    mx = float('-inf')
+    sm = 0
     ans = 0
-
-    for i in s:
-        l.add(i)
-        ans += len(l)
-
-    print(ans)
-
-    return
     
-    
-    
-    
+    for i in range(min(n,k)):
+        sm += a[i]
+        mx = max(mx, b[i])
+        ans = max(ans, sm + (mx)*(k-i-1))
         
+    print(ans)
+    return
+
+
 # region fastio
 
 BUFSIZE = 8192
